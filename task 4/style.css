@@ -1,0 +1,595 @@
+/* =========================================
+   GENERAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4facfe,
+            #00f2fe
+        );
+
+    color: #222;
+
+    padding: 30px 15px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   SEARCH SECTION
+========================================= */
+
+.search-section {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 25px;
+}
+
+
+#weather-form {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+#city-input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+#city-input:focus {
+    border-color: #2196f3;
+}
+
+
+#search-button {
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2196f3;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#search-button:hover {
+    background: #1976d2;
+
+    transform: translateY(-2px);
+}
+
+
+#search-button:disabled {
+    background: #aaa;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    border: 5px solid #ddd;
+
+    border-top: 5px solid #2196f3;
+
+    border-radius: 50%;
+
+    margin: auto auto 15px;
+
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+    background: #ffebee;
+
+    color: #c62828;
+
+    border: 1px solid #ef9a9a;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   WEATHER DASHBOARD
+========================================= */
+
+.weather-dashboard {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   LOCATION CARD
+========================================= */
+
+.location-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.location-info h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.location-info p {
+    color: #666;
+
+    margin-bottom: 5px;
+}
+
+
+.weather-icon {
+    font-size: 65px;
+}
+
+
+/* =========================================
+   TEMPERATURE CARD
+========================================= */
+
+.temperature-card {
+    background: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.temperature-card .label {
+    color: #666;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.temperature-card h2 {
+    font-size: 60px;
+
+    margin-bottom: 8px;
+}
+
+
+.temperature-card #weather-description {
+    font-size: 20px;
+
+    color: #555;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   METRICS
+========================================= */
+
+.metrics {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.metric-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.metric-icon {
+    font-size: 35px;
+}
+
+
+.metric-title {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.metric-card h3 {
+    font-size: 20px;
+}
+
+
+/* =========================================
+   DETAILS CARD
+========================================= */
+
+.details-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.details-card h2 {
+    margin-bottom: 20px;
+}
+
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.detail {
+    background: #f5f8fc;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.detail span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.detail strong {
+    font-size: 19px;
+}
+
+
+/* =========================================
+   API INFORMATION
+========================================= */
+
+.api-info {
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome {
+    background: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 20px;
+}
+
+
+.welcome-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+
+.welcome p {
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+
+    color: white;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .metrics {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .details-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+
+    #weather-form {
+        flex-direction: column;
+    }
+
+
+    #search-button {
+        width: 100%;
+    }
+
+
+    .location-card {
+        padding: 20px;
+    }
+
+
+    .location-info h2 {
+        font-size: 24px;
+    }
+
+
+    .weather-icon {
+        font-size: 50px;
+    }
+
+
+    .temperature-card h2 {
+        font-size: 48px;
+    }
+
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
