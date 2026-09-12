@@ -4,7 +4,7 @@ ShopSphere is a modern e-commerce web application built using React and Vite. It
 
 ## 🚀 Live Demo
 
-**[View ShopSphere Live](YOUR_DEPLOYMENT_LINK_HERE)**
+**[View ShopSphere Live](shopsphere-nu-five.vercel.app)**
 
 > Replace `shopsphere-nu-five.vercel.app` with your actual deployed website URL.
 
@@ -81,7 +81,7 @@ npm run build
 
 ShopSphere has been deployed as a production web application.
 
-**Live Website:** [Open ShopSphere](shopsphere-nu-five.vercel.app)
+**Live Website:** (shopsphere-nu-five.vercel.app)
 
 ## 📌 Project Objective
 
