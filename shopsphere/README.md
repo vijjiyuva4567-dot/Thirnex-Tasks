@@ -81,6 +81,8 @@ npm run build
 
 ShopSphere has been deployed as a production web application.
 
+Live Website: shopsphere-nu-five.vercel.app
+
 **Live Website:** [shopsphere-nu-five.vercel.app]
 
 ## 📌 Project Objective
