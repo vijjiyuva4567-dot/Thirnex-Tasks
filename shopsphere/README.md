@@ -2,6 +2,10 @@
 
 ShopSphere is a modern e-commerce web application built using React and Vite. It provides a responsive shopping experience with modular components, client-side routing, product browsing, and shopping cart functionality.
 
+🚀 Live Demo
+
+View ShopSphere Live
+
 ## 🚀 Live Demo
 
 [shopsphere-nu-five.vercel.app]
